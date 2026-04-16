@@ -1,0 +1,491 @@
+/* ================= ROOT COLORS ================= */
+:root {
+  --green-main: #5F7D6A;
+  --green-soft: #B7D3B0;
+
+  --cream: #F4EFEA;
+  --light-bg: #FCFAF7;
+
+  --wood: #A67C52;
+  --wood-dark: #5E3B2C;
+
+  --beige-accent: #EDE3D9;
+
+  --text-dark: #2B2B2B;
+  --text-soft: #6B6B6B;
+
+  --white: #FFFFFF;
+}
+
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--text-dark);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.logo {
+  text-align: center;
+  color: #2a2a2a;
+}
+
+/* Main Name */
+.logo-main {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.logo-main span {
+  display: block;}
+
+
+/* Subtext */
+.logo-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 3.8px;
+  margin-top: 6px;
+  color: #555;
+  text-transform: lowercase;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  position: relative;
+}
+
+/* underline animation */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--green-main);
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1509440159596-0249088772ff') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(30, 30, 30, 0.45);
+  backdrop-filter: blur(6px);
+  padding: 60px;
+  border-radius: 14px;
+  text-align: center;
+  color: var(--white);
+}
+
+.overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  color: #eee;
+  font-size: 1.1rem;
+}
+
+.overlay button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: none;
+  background: var(--wood);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.overlay button:hover {
+  background: var(--wood-dark);
+}
+.contact-message {
+  font-size: 18px;
+  color: #6f472d;
+  margin-bottom: 20px;
+  font-style: italic;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 110px 60px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: var(--wood-dark);
+}
+
+p {
+  color: var(--text-soft);
+}
+
+/* ================= MENU SECTION ================= */
+.menu {
+  background: var(--light-bg);
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.menu h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--wood-dark);
+}
+
+/* ================= GRID ================= */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* ================= CARD ================= */
+.menu-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  height: 100%;
+}
+
+/* ================= IMAGE ================= */
+.menu-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* ================= HOVER EFFECT ================= */
+.menu-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ================= OVERLAY ================= */
+.menu-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  transition: 0.3s;
+}
+
+/* ================= TEXT ================= */
+.menu-info h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* ================= TEXT HOVER ================= */
+.menu-card:hover .menu-info {
+  padding-bottom: 25px;
+}
+
+/* ================= BUTTON ================= */
+.menu-button-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.full-menu-btn {
+  padding: 10px 22px;
+  font-size: 14px;
+  background: var(--wood);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.full-menu-btn:hover {
+  background: var(--wood-dark);
+}
+
+/* ================= POPUP ================= */
+.menu-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.menu-popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+.menu-images {
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu-images img {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .menu {
+    padding: 80px 30px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .menu {
+    padding: 60px 20px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+  background: var(--beige-accent);
+}
+
+.gallery-grid {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 280px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= ABOUT ================= */
+.about {
+  background: var(--cream);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.9;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--green-main);
+}
+
+.about-highlight {
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--wood-dark);
+}
+
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f9f5f1;
+}
+
+.map-container {
+  margin-top: 25px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  background: var(--light-bg);
+}
+
+.contact button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: var(--green-main);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: var(--green-soft);
+}
+.contact {
+  padding: 80px 20px;
+  background: #f9f5f1;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.contact-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.contact-box h3 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #8b5e3c;
+}
+
+.contact-box p {
+  margin-bottom: 5px;
+}
+.contact-message {
+  font-size: 17px;
+  color: #8b5e3c;
+  margin-bottom: 18px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: var(--wood-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbar ul {
+    gap: 15px;
+  }
+
+  section {
+    padding: 80px 20px;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overlay {
+    padding: 30px;
+  }
+
+  .overlay h1 {
+    font-size: 2rem;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-width: 320px;
+  }
+}

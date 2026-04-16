@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baker's Blend | Udaipur</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+  <div class="logo-main">
+    <span>Baker’s</span>
+    <span>Blend</span>
+  </div>
+  <div class="logo-sub">
+    cafe & patisserie
+  </div>
+</div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="overlay">
+    <h1>Freshly Baked Happiness</h1>
+    <p class="contact-message">
+     Step in for good coffee, sweet treats, and even better vibes
+   </p>
+    <button onclick="scrollToSection('menu')">Explore Menu</button>
+  </div>
+</section>
+
+
+
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2>About Us</h2>
+
+  <div class="about-content">
+    <p class="about-intro">
+      Welcome to <strong>Baker’s Blend</strong> – where European elegance meets the warmth of home.
+    </p>
+
+    <p>
+      Nestled in the quiet charm of Madhuban, Udaipur, Baker’s Blend is more than just a café — it’s a thoughtfully curated escape for those who appreciate fine baking, comforting flavors, and beautiful spaces.
+    </p>
+
+    <p>
+      Founded by <strong>Gitanjali Rathore</strong>, our café was born from a vision to elevate Udaipur’s dessert culture with a touch of European artistry. From handcrafted custom cakes and artisanal cheesecakes to wood-fired pizzas, fluffy baos, and gourmet pastas, every creation is made with uncompromising quality and a deep passion for the craft.
+    </p>
+
+    <p>
+      Step into our pastel-hued sanctuary, where every detail is designed to make you feel at ease. Whether you're working over coffee, sharing laughter over board games, or enjoying a quiet moment with your furry companion, Baker’s Blend is a space where moments turn into memories.
+    </p>
+
+    <p class="about-highlight">
+      We don’t just serve food — we craft experiences, where every slice, every sip, and every visit feels truly special. 🌿✨
+    </p>
+  </div>
+</section>
+
+<!-- MENU -->
+ <section id="menu" class="menu">
+
+  <h2>Our Signature's</h2>
+
+  <div class="menu-grid">
+
+    <div class="menu-card">
+      <img src="images/bao.jpg">
+      <div class="menu-info"><h3>Spicy Cottage Cheese Bao</h3></div>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/pizza.jpg">
+      <div class="menu-info"><h3>Wood Fired Pizza</h3></div>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/hotchocolate.jpg">
+      <div class="menu-info"><h3>Cinnamon Hot Chocolate</h3></div>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/cappuccino.jpg">
+      <div class="menu-info"><h3>Cappuccino</h3></div>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/crossiant.jpg">
+      <div class="menu-info"><h3>Gourmet Croissant Sandwich</h3></div>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/sandwich.jpg">
+      <div class="menu-info"><h3>Sandwich</h3></div>
+    </div>
+
+    <!-- ✅ FIXED -->
+    <div class="menu-card">
+      <img src="images/cupcake.jpg">
+      <div class="menu-info"><h3>Cruffin</h3></div>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/saffron.jpg">
+      <div class="menu-info"><h3>Saffron Milk Cake</h3></div>
+    </div>
+
+  </div>
+
+  <!-- ✅ BUTTON OUTSIDE GRID -->
+  <div class="menu-button-container">
+    <button class="full-menu-btn" onclick="openMenu()">View Full Menu</button>
+  </div> 
+
+</section>
+
+<!-- POPUP -->
+<div id="menuPopup" class="menu-popup">
+  <span class="close-btn" onclick="closeMenu()">×</span>
+  <div class="menu-images">
+  <img src="menu/fullmenu1.jpg" alt="Full Menu">
+  <img src="menu/fullmenu2.jpg" alt="Full Menu">
+  <img src="menu/fullmenu3.jpg" alt="Full Menu">
+  <img src="menu/fullmenu4.jpg" alt="Full Menu">
+</div>
+</div>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+  <h2>Our Space</h2>
+  <div class="gallery-grid">
+    <img src="places/places3.jpg">
+    <img src="places/places2.jpg">
+    <img src="places/places1.jpg">
+    <img src="places/places4.jpg">
+    
+  </div>
+</section>
+
+<section id="contact" class="contact">
+
+  <h2>Visit Us</h2>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps?q=Bakers%20Blend%20Cafe%20Udaipur&output=embed"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  
+  <div class="contact-container">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-box">
+     <p class="contact-message">
+     We’d love to welcome you! Visit us for a cozy café experience.
+     </p>
+      <h3>Timings</h3>
+      <p>Monday - Sunday</p>
+      <p>12:00 PM – 11:00 PM</p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-box">
+      <h3>Address</h3>
+      <p>1, Madhuban, Near Meera Girls College, Meera Marg, Bhopalpura, Udaipur, Rajasthan</p>
+      <h3>Phone</h3>
+      <p>+91 98765 43210</p>
+
+      <h3>Email</h3>
+      <p>hellobakersblend@gmail.com</p>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Baker's Blend All Right Reserved. Designed By Shivranjani.</p>
+</footer>
+
+<script>
+  function openMenu() {
+    document.getElementById("menuPopup").style.display = "flex";
+  }
+
+  function closeMenu() {
+    document.getElementById("menuPopup").style.display = "none";
+  }
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
